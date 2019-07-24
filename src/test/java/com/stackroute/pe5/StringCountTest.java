@@ -32,4 +32,19 @@ public class StringCountTest {
         //Assert
         assertEquals(expected, actual);
     }
+    @Test
+    public void givenStringAsInputShouldCheckFrequencyNotNull() {
+        Map<String, Integer> expected = new HashMap<String, Integer>();
+        Map<String, Integer> actual = new HashMap<String, Integer>();
+
+        //Act
+        expected.put("my", 1);
+        expected.put("name", 1);
+        expected.put("is", 1);
+        expected.put("sruthi", 1);
+
+        actual = stringCount.countStr("my name is sruthi");
+        //Assert
+        assertNotNull(actual);
+    }
 }
